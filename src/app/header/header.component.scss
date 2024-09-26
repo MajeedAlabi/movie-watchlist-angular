@@ -1,0 +1,15 @@
+.header-container{
+    background: linear-gradient(135deg, #ffe645 0%, #e2aa02 100%);
+    font-family: 'Creepster', cursive;
+
+    h2{
+        letter-spacing: 5px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    button{
+        background-color:transparent;
+        border: none;
+    }
+}

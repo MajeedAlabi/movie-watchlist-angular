@@ -1,0 +1,108 @@
+.home-container {
+    ::-webkit-scrollbar{
+        height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background-color: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: #ff9900;
+        border-radius: calc(15px / 2);
+    }
+
+    ::-webkit-scrollbar-button:horizontal:end:increment {
+        background-image: url(http://i.imgur.com/rwmYdPk.png);
+        display: block;
+    }
+
+    ::-webkit-scrollbar-button:horizontal:start:decrement {
+        background-image: url(http://i.imgur.com/VAvOauT.png);
+        display: block;
+    }
+
+    .allMovies {
+        border-right: 1px solid #fdc827;
+        width: 75%;
+        font-family: "Roboto", sans-serif;
+
+        .top {
+            h4 {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 5px solid #ff9900;
+                padding-left: 10px;
+            }
+
+            .view-all {
+                color: #ff9900;
+                cursor: pointer;
+            }
+        }
+
+        .movie-thumbnail {
+            overflow-x: scroll;
+            
+
+            .movie {
+                .cover {
+                    cursor: pointer;
+
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+
+                .detail {
+                    width: 180px;
+
+                    .name {
+                        font-weight: bold;
+                        height: 50px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+
+                    i{
+                        color: #ff9900;
+                    }
+                }
+            }
+        }
+    }
+
+    .allTimePopular{
+        width: 25%;
+        .top{
+            h4 {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 5px solid #ff9900;
+                padding-left: 10px;
+            }
+        }
+        .popular-movies{
+            margin-bottom: 20px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .name {
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            i{
+                color: #ff9900;
+            }
+        }
+        .view-all {
+            color: #ff9900;
+            text-align: right;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    }
+}
