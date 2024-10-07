@@ -11,11 +11,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/` OR Run `ng
 A simple app used to show understanding of how to obtain data from mock APIs. The app fetches data from the data file in the assets folder and displays the result. There is also a review page in which interested movies can gte reviwed and ratings by the user. 
 
 ## Limitations
--The login page can only be accessed with the credientials [{username: "majeed"}, {password: "1234"}]
+The login page can only be accessed with the credientials [{username: "majeed"}, {password: "1234"}]
 
--The rating features which was supposed to use ng-bootstrap-rating is still giving me difficulties (i will make sure to rectify in due time)
+The rating features which was supposed to use ng-bootstrap-rating is still giving me difficulties (i will make sure to rectify in due time)
 
--The Review page is a read only page , the user's review cant be pushed to the page yet.
+The Review page is a read only page , the user's review cant be pushed to the page yet.
 
 ## Contributing
 Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
