@@ -8,11 +8,11 @@
             </div>
             <div class="movie-thumbnail d-flex justify-content-between mb-5">
                 <div class="movie mx-2 mb-3" *ngFor="let movie of trendingmovies">
-                    <div class="cover">
+                    <div class="cover" (click)="goToMovies('trending', movie.id)">
                         <img [src]="movie.cover" alt="" />
                     </div>
                     <div class="detail">
-                        <div class="name">{{ movie.name }}</div>
+                        <div class="name" (click)="goToMovies('trending', movie.id)">{{ movie.name }}</div>
                         <div class="rating">
                             <span class="rating-value">{{ movie.rating }}</span>
                             <i class="bi bi-star-fill fs-6 ms-1"></i>
@@ -21,6 +21,7 @@
                 </div>
             </div>
         </div>
+
         <div class="theatreMovies">
             <div class="top d-flex justify-content-between align-items-center mb-4">
                 <h4>Popular in Theatres</h4>
@@ -28,11 +29,11 @@
             </div>
             <div class="movie-thumbnail d-flex justify-content-between mb-5">
                 <div class="movie mx-2 mb-3" *ngFor="let movie of theatremovies">
-                    <div class="cover">
+                    <div class="cover" (click)="goToMovies('theatre', movie.id)">
                         <img [src]="movie.cover" alt="" />
                     </div>
                     <div class="detail">
-                        <div class="name">{{ movie.name }}</div>
+                        <div class="name" (click)="goToMovies('theatre', movie.id)">{{ movie.name }}</div>
                         <div class="rating">
                             <span class="rating-value">{{ movie.rating }}</span>
                             <i class="bi bi-star-fill fs-6 ms-1"></i>
@@ -48,7 +49,7 @@
             <h4>All time popular</h4>
         </div>
         <div class="popular-movies" *ngFor="let movie of popularmovies ">
-            <div class="name">{{ movie.name }}</div>
+            <div class="name" (click)="goToMovies('popular', movie.id)">{{ movie.name }}</div>
             <div class="rating">
                 <span class="rating-value">{{ movie.rating }}</span>
                 <i class="bi bi-star-fill fs-6 ms-1"></i>

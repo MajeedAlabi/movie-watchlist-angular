@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   popularmovies:any = ""
   theatremovies:any = ""
 
-  constructor( private http:HttpClient ){ }
+  constructor( private http:HttpClient, private router:Router ){ }
 
   ngOnInit(): void {
     this.getTrendingMovies();
@@ -23,24 +23,29 @@ export class HomeComponent implements OnInit {
   }
 
   getTrendingMovies(){
-    this.http.get("http://localhost:57246/assets/data/trending-movies.json")
+    this.http.get("http://localhost:49921/assets/data/trending-movies.json")
     .subscribe((movies) => {
       this.trendingmovies = movies;
     }); 
   }
 
   getPopularMovies(){
-    this.http.get("http://localhost:57246/assets/data/popular-movies.json")
+    this.http.get("http://localhost:49921/assets/data/popular-movies.json")
     .subscribe((movies) => {
       this.popularmovies = movies;
     }); 
   }
 
   getTheatreMovies(){
-    this.http.get("http://localhost:57246/assets/data/theatre-movies.json")
+    this.http.get("http://localhost:49921/assets/data/theatre-movies.json")
     .subscribe((movies) => {
       this.theatremovies = movies;
     }); 
+  }
+
+  goToMovies(type:string , id:string){
+    this.router.navigate(["movie", type, id]);
+    console.log("click")
   }
 
 }
